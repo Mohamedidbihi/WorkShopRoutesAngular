@@ -1,0 +1,10 @@
+<div class="card-columns">
+    <div class="card" style="width: 18rem;" *ngFor="let follower of followers">
+        <img class="card-img-top" src= "{{follower.avatar_url}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ follower.login }}e</h5>
+          <p class="card-text">{{follower.html_url}}</p>
+          <a [routerLink]="['/followers',follower.id]" [queryParams]="{page:1 ,type: follower.type , var:'exemple'}" class="btn btn-primary">Details</a>
+        </div>
+      </div>
+</div>
